@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Converter</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #1a304b;
+        }
+        .container {
+            width: 350px;
+            margin: 100px auto;
+            padding: 20px;
+            background: #f1F5F9;
+            border-radius: 8px;
+            text-align: center;
+        }
+        input, button {
+            width: 90%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+        button {
+            background-color: #163919;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Currency Converter</h2>
+
+    <form method="POST">
+        <input type="number" step="any" name="amount" placeholder="Enter Amount" required>
+        <input type="text" name="from_currency" placeholder="From Currency (INR)" required>
+        <input type="text" name="to_currency" placeholder="To Currency (USD)" required>
+        <button type="submit">Convert</button>
+    </form>
+
+    {% if result %}
+        <h3>Converted Amount: {{ result }}</h3>
+    {% endif %}
+</div>
+
+</body>
+</html>
